@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/GloballyUnitedCoin.sol": "SafeMath"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/GloballyUnitedCoin.sol": {
+			"keccak256": "0xd06db18a2757d7f0883d12ccdc94cb2819992d7ce31ca00f6f0fe7e41fae354c",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://56ebe6ead4d43fe4b7664d41fd464779a67bef5d30b4a768cd120ed1eb3426b0",
+				"dweb:/ipfs/QmX84mJUiAaUDU1MyAoD7j7BCzEBzQcC9qpCbeb1jmii7D"
+			]
+		}
+	},
+	"version": 1
+}

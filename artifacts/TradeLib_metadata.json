@@ -1,0 +1,1410 @@
+{
+	"compiler": {
+		"version": "0.8.14+commit.80d49f37"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "cancellationsAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "contract GUTradeManager",
+						"name": "manager",
+						"type": "GUTradeManager"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "nftSigner",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "seller",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "tokenAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "startPrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reservePrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "start",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuctionData",
+								"name": "auction",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "auctionSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "bytes",
+										"name": "signature",
+										"type": "bytes"
+									},
+									{
+										"internalType": "uint256",
+										"name": "fee",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuthData",
+								"name": "auth",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "authSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "bidder",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "to",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.BidData",
+								"name": "bid",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "bidSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "bidAuth",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "bidAuthSignature",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct TradeLib.FinalizeAuction",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "checkFinalizeAuctionPreconditions",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "cancellationsAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "contract GUTradeManager",
+						"name": "manager",
+						"type": "GUTradeManager"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "nftSigner",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "seller",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "tokenAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "price",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "start",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.SaleData",
+								"name": "sale",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "saleSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "bytes",
+										"name": "signature",
+										"type": "bytes"
+									},
+									{
+										"internalType": "uint256",
+										"name": "fee",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuthData",
+								"name": "auth",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "authSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "offerer",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "to",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.OfferData",
+								"name": "offer",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "offerSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "offerAuth",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "offerAuthSignature",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct TradeLib.FinalizeOffer",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "checkFinalizeOfferPreconditions",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract GUCollections",
+						"name": "collections",
+						"type": "GUCollections"
+					},
+					{
+						"internalType": "contract GUTradeManager",
+						"name": "manager",
+						"type": "GUTradeManager"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							}
+						],
+						"internalType": "struct TradeLib.MintTo",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "checkMintToPreconditions",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "cancellationsAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "contract GUTradeManager",
+						"name": "manager",
+						"type": "GUTradeManager"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "nftSigner",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "seller",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "tokenAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "price",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "start",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.SaleData",
+								"name": "sale",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "saleSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "bytes",
+										"name": "signature",
+										"type": "bytes"
+									},
+									{
+										"internalType": "uint256",
+										"name": "fee",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuthData",
+								"name": "auth",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "authSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							}
+						],
+						"internalType": "struct TradeLib.FinalizePurchase",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "checkPurchasePreconditions",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_messageHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "getEthSignedMessageHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_ethSignedMessageHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "recoverSigner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "splitSignature",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "r",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "s",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "v",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "nftSigner",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "seller",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "tokenAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "startPrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reservePrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "start",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuctionData",
+								"name": "auction",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "auctionSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "bytes",
+										"name": "signature",
+										"type": "bytes"
+									},
+									{
+										"internalType": "uint256",
+										"name": "fee",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuthData",
+								"name": "auth",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "authSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "bidder",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "to",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.BidData",
+								"name": "bid",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "bidSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "bidAuth",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "bidAuthSignature",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct TradeLib.FinalizeAuction",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyFinalizeAuctionSignatures",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "nftSigner",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "seller",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "tokenAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "price",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "start",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.SaleData",
+								"name": "sale",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "saleSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "bytes",
+										"name": "signature",
+										"type": "bytes"
+									},
+									{
+										"internalType": "uint256",
+										"name": "fee",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuthData",
+								"name": "auth",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "authSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "offerer",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "to",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.OfferData",
+								"name": "offer",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "offerSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "offerAuth",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "offerAuthSignature",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct TradeLib.FinalizeOffer",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyFinalizeOfferSignatures",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "nftSigner",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "creator",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "cid",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "supply",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "royalty",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "nftContract",
+										"type": "address"
+									}
+								],
+								"internalType": "struct TradeLib.NFTData",
+								"name": "nftData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "nftSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "seller",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "listingId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "nftId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "tokenAddress",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "price",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "start",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "expiry",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.SaleData",
+								"name": "sale",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "saleSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "authorized",
+								"type": "address"
+							},
+							{
+								"components": [
+									{
+										"internalType": "bytes",
+										"name": "signature",
+										"type": "bytes"
+									},
+									{
+										"internalType": "uint256",
+										"name": "fee",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct TradeLib.AuthData",
+								"name": "auth",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes",
+								"name": "authSignature",
+								"type": "bytes"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							}
+						],
+						"internalType": "struct TradeLib.FinalizePurchase",
+						"name": "data",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyPurchaseSignatures",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/GU-NFT/TradeLib.sol": "TradeLib"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC1155/ERC1155.sol": {
+			"keccak256": "0x74216d303b87202736b6d571fc3e9b530aa98ff017a41516170f1c555e518669",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c0228d82cef8911972f4cbf7e33dfb9ceebb813d15771335949e06fc0f4a3f1b",
+				"dweb:/ipfs/QmYCgp6PABoEe9iDmZTeUc31wp7ekraVavgKF1vVSnd438"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
+			"keccak256": "0x8e93de94c9062ebc94fb7e2e3929b0781ac6a2b7772e2f7a59045861c93e5be9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f920a631bf986c610fe573d3c70a2bb6f224f86f4a8550016470c7ee476c9ab5",
+				"dweb:/ipfs/QmYzsyVMfnaREKHcHv5RPS8Xg5r1Q38E2SDsGBTnXeFWzb"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol": {
+			"keccak256": "0xeb373f1fdc7b755c6a750123a9b9e3a8a02c1470042fd6505d875000a80bde0b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e28648f994abf1d6bc345644a361cc0b7efa544f8bc0c8ec26011fed85a91ec",
+				"dweb:/ipfs/QmVVE7AiRjKaQYYji7TkjmTeVzGpNmms5eoxqTCfvvpj6D"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol": {
+			"keccak256": "0xe3deb5f3b0c9d12944f62ab680f041bbf1910d9d3ac6b545b4b8e399643c538d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e1f5bc920c2f9859b02dce02d7d0211608398287c643d42ad048555c9b204dc8",
+				"dweb:/ipfs/QmSu2MFkCSPNG6pRsXxMai7Do7EDqLwpnnHVDB7q2wHJnr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol": {
+			"keccak256": "0xa66d18b9a85458d28fc3304717964502ae36f7f8a2ff35bc83f6f85d74b03574",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e46c80ea068989111d6103e5521223f9ef337e93de76deed8b03f75c6f7b2797",
+				"dweb:/ipfs/QmNoSE6knNfFncdDDLTb3fGR6oSQty1srG96Vsx3E9wQdw"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0xe0c8b625a79bac0fe80f17cfb521e072805cc9cef1c96a5caf45b264e74812fa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://12fd1efc9ad061ef675bd50fb0c8e3c6f2952a09f8df0e3c688b8d81b8918838",
+				"dweb:/ipfs/QmawN6PjTwy91pU7ANjCSgbsLc8TDA6hwu9GsFFaNSuhb5"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+				"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+			]
+		},
+		"@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0x2ccf9d2313a313d41a791505f2b5abfdc62191b5d4334f7f7a82691c088a1c87",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3a57d0854b2fdce6ebff933a48dca2445643d1eccfc27f00292e937f26c6a58",
+				"dweb:/ipfs/QmW45rZooS9TqR4YXUbjRbtf2Bpb5ouSarBvfW1LdGprvV"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30",
+				"dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d",
+				"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"contracts/GU-NFT/ERC1155URIStorage.sol": {
+			"keccak256": "0x3bd21ed09d57d19c096600c0c4686c1e21e6daaac30e003779326e3dacbc6f81",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd5d62a30cdf635ba296114bfd8866032584bbf1871978ad6ea43f8f0f6a4dfc",
+				"dweb:/ipfs/QmXULbh2FqigXYjTrgzJpS2jn3UbHBJdGoBwEAG3vMvLq6"
+			]
+		},
+		"contracts/GU-NFT/GUCancellations.sol": {
+			"keccak256": "0xcbd6477d91f92f17d2b3a8a93419adcdf636ff615eeaefdd042b748c0cbf556f",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://9095774fd3831ad170fc5ab6c8de82dace45decce2b30a2c3f3e7b4075837fd9",
+				"dweb:/ipfs/QmaJRseA6FnxXGL4LvxnZQuKMJapRGSLh586ywXjCRWt9v"
+			]
+		},
+		"contracts/GU-NFT/GUCollections.sol": {
+			"keccak256": "0x7ddb9754d45740c7b7c91289d4854bcc973b18c02b627fe6adf9e129f37b5804",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://3ff4cf9e1485c815f70a32293d0503e4342c8e81b92a7e26e1519e31f555bc94",
+				"dweb:/ipfs/Qmaj4E2oNiVo1T13sgbMyYQthzRbrvWg2Zo2D9hLjzeaGH"
+			]
+		},
+		"contracts/GU-NFT/GUTradeManager.sol": {
+			"keccak256": "0x1377dccc04534d5acc319e34c564692625d95787ac1c0eb7030f02152912de79",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://ab9a023be033e2f9d87bbc0f159be061a765214a9ea5897a9645dd2e8c016cb8",
+				"dweb:/ipfs/QmWpe7nMBv2tbUbf6Yh73ySdAp3PoR54HZXqDuPHfCDXnU"
+			]
+		},
+		"contracts/GU-NFT/TradeLib.sol": {
+			"keccak256": "0x632b0c9340e96cd7e375a1e6d7f083e75962065b9bf41b14144e92af1e4ec460",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://0c00091db2c12f4388bee345b096ee00e303384af20af24048a0df0250b32490",
+				"dweb:/ipfs/Qmey61UBEhy8aULp3wW7G8JDmmoVTtfuQLTUt4Cff4t7VP"
+			]
+		}
+	},
+	"version": 1
+}
